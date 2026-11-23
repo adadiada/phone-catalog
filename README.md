@@ -4,7 +4,7 @@ A modern, responsive e-commerce web application for browsing and purchasing mobi
 
 ## Live Preview
 
-- [DEMO LINK](https://adadiada.github.io/phone-catalog/
+- [DEMO LINK](https://adadiada.github.io/phone-catalog/)
 
 ## Design Reference
 
@@ -22,7 +22,6 @@ A modern, responsive e-commerce web application for browsing and purchasing mobi
 
 ## Getting Started
 
-)
 Follow these instructions to set up and run the project locally on your machine:
 
 1. **Clone the repository:**
