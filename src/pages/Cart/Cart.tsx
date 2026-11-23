@@ -70,10 +70,6 @@ export const Cart = () => {
                       alt="close"
                     />
                   </button>
-                  {/* <Link
-                  to={`/${item.product.category}/${item.product.itemId}`}
-                  className={styles.productLink} */}
-                  {/* > */}
                   <img
                     className={styles.imgCartBlock}
                     src={item.product.image}
@@ -82,7 +78,6 @@ export const Cart = () => {
                   <div className={styles.cartNameBlock}>
                     <h3 className={styles.cartName}>{item.product.name}</h3>
                   </div>
-                  {/* </Link> */}
                 </div>
 
                 <div className={styles.cardGroup}>

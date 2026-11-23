@@ -128,7 +128,7 @@
         background-color: #313237;
 
         opacity: 0;
-        transform: scaleX(0); // Линия сжата до нулевой ширины
+        transform: scaleX(0);
         transition: transform 0.2s ease, opacity 0.2s ease;
       }
 
