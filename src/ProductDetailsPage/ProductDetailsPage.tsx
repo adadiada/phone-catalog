@@ -179,7 +179,7 @@ export const ProductDetailsPage = () => {
 
           <div className={styles.mainImageBlock}>
             <img
-              src={`/${selectedImages}`}
+              src={`./${selectedImages}`}
               alt={name}
               className={styles.mainImage}
             />
