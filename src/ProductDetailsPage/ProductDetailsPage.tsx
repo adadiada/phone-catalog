@@ -172,7 +172,7 @@ export const ProductDetailsPage = () => {
                 onClick={() => setSelectedImages(img)}
                 className={`${styles.imagesByOne} ${selectedImages === img ? styles.activeImg : ''}`}
               >
-                <img src={`/${img}`} alt="thumbnail" />
+                <img src={`./${img}`} alt="thumbnail" />
               </button>
             ))}
           </div>
