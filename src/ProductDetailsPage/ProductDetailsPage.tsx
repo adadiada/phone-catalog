@@ -272,7 +272,7 @@ export const ProductDetailsPage = () => {
             <div className={styles.aboutDescription}>
               {products.description.map((des, index) => (
                 <div key={index} className={styles.aboutSection}>
-                  <strong className={styles.aboutTitle}>{des.title}</strong>
+                  <p className={styles.aboutTitle}>{des.title}</p>
                   <p className={styles.aboutText}>{des.text}</p>
                 </div>
               ))}

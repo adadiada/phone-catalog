@@ -49,7 +49,7 @@ export const Cart = () => {
         <button className={styles.homeButton}>
           <img src="/img/home.svg" alt="home" className={styles.homeImg} />
           <img src="/img/arrow.svg" alt="arrow" className={styles.arrow} />
-          <span className={styles.homeGoTo}>Cart</span>
+          <span className={styles.homeGoTo}>Back</span>
         </button>
       </Link>
       <h1 className={styles.titleContainer}>Cart</h1>

@@ -13,7 +13,8 @@ type Props = {
   product?: Products[];
   title?: boolean;
 };
-type PageItem = number | '...';
+
+type Page = number | '...';
 
 export const ProductList: React.FC<Props> = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -31,6 +32,29 @@ export const ProductList: React.FC<Props> = () => {
 
   const startIndex = (page - 1) * perPage;
   const lastIndex = startIndex + perPage;
+
+  const getPagination = (totalPages: number, currentPage: number): Page[] => {
+    if (totalPages <= 4) {
+      return Array.from({ length: totalPages }, (__, index) => index + 1);
+    }
+
+    if (currentPage <= 3) {
+      return [1, 2, 3, '...', totalPages];
+    }
+
+    if (currentPage >= totalPages - 2) {
+      return [1, 2, 3, '...', totalPages - 2, totalPages - 1, totalPages];
+    }
+
+    return [
+      1,
+      '...',
+      currentPage - 1,
+      currentPage,
+      currentPage + 1,
+      totalPages,
+    ];
+  };
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   function setSearchWith(params: any) {
@@ -153,18 +177,26 @@ export const ProductList: React.FC<Props> = () => {
           disabled={page === 1}
           className={styles.vectorButton}
         >
-          <img src="/img/vectorLeft.svg" alt="prev" className={styles.vector} />
+          <img
+            src="./img/vectorLeft.svg"
+            alt="prev"
+            className={styles.vector}
+          />
         </button>
-        {Array.from({ length: totalPages }, (_, i) => (
-          <button
-            key={i}
-            onClick={() => handlePageChange(i + 1)}
-            disabled={i + 1 === page}
-            className={styles.vectorCount}
-          >
-            {i + 1}
-          </button>
-        ))}
+        {getPagination(totalPages, page).map((itemP, index) =>
+          itemP === '...' ? (
+            <span key={`dots-${index}`}>...</span>
+          ) : (
+            <button
+              key={itemP}
+              onClick={() => handlePageChange(itemP)}
+              disabled={itemP === page}
+              className={styles.vectorCount}
+            >
+              {itemP}
+            </button>
+          ),
+        )}
         <button
           onClick={() => handlePageChange(page + 1)}
           disabled={page >= totalPages}
