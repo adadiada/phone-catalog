@@ -13,7 +13,7 @@ export const UseSwiper: React.FC = () => {
   const [error, setError] = useState('');
 
   useEffect(() => {
-    getData<Products[]>('/api/products.json')
+    getData<Products[]>('./api/products.json')
       .then(data => {
         setProducts(data || []);
       })
