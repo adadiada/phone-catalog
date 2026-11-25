@@ -133,15 +133,15 @@ export const ProductDetailsPage = () => {
     <div className={styles.containerPhones}>
       <Link to={`/${category}`} className={styles.home}>
         <button className={styles.homeButton}>
-          <img src="/img/home.svg" alt="home" className={styles.homeImg} />
+          <img src="./img/home.svg" alt="home" className={styles.homeImg} />
           <img
-            src="/img/vectorRight.svg"
+            src="./img/vectorRight.svg"
             alt="right"
             className={styles.homeGo}
           />
           <span className={styles.homeGoTo}>{category}</span>
           <img
-            src="/img/vectorRight.svg"
+            src="./img/vectorRight.svg"
             alt="right"
             className={styles.homeGo}
           />

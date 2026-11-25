@@ -13,6 +13,7 @@ type Props = {
   product?: Products[];
   title?: boolean;
 };
+type PageItem = number | '...';
 
 export const ProductList: React.FC<Props> = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -98,8 +99,8 @@ export const ProductList: React.FC<Props> = () => {
     <div className={styles.containerPhones}>
       <Link to="/" className={styles.home}>
         <button className={styles.homeButton}>
-          <img src="/img/home.svg" alt="home" className={styles.homeImg} />
-          <img className={styles.arrow} src="/img/arrow.svg" alt="arrow" />
+          <img src="./img/home.svg" alt="home" className={styles.homeImg} />
+          <img className={styles.arrow} src="./img/arrow.svg" alt="arrow" />
           <span className={styles.homeGoTo}>{category}</span>
         </button>
       </Link>
@@ -170,7 +171,7 @@ export const ProductList: React.FC<Props> = () => {
           className={styles.vectorButton}
         >
           <img
-            src="/img/vectorRight.svg"
+            src="./img/vectorRight.svg"
             alt="next"
             className={styles.vector}
           />
